@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+class Person {
+protected:
+    string Name, Pasword;
+    int Id;
+
+public:
+    Person(int Id, string Name, string Pasword) :Id(Id), Name(Name), Pasword(Pasword) {}
+    Person() {}
+    //setters
+    void setid(int Id) {
+        this->Id = Id;
+    }
+    void setname(string Name) {
+        if (Validation::isValidName(Name)) {
+            this->Name = Name;
+        }
+        else {
+            cout << "not Validation " << endl;
+        }
+    }
+    void setpassword(string Pasword) {
+        if (Validation::isValidPassword(Pasword)) {
+            this->Pasword = Pasword;
+        }
+        else {
+            cout << "not same password" << endl;
+        }
+
+    }
+    //getters
+    int getid() {
+        return Id;
+    }
+    string getname() {
+        return Name;
+    }
+    string  getpassword() {
+        return Pasword;
+    }
+
+
+    void displayPerson() {
+        cout << "name :" << Name << endl;
+        cout << "ID :" << Id << endl;
+        cout << "Password : " << Pasword << endl;
+    }
+};
