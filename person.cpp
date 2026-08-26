@@ -8,7 +8,11 @@ protected:
     int Id;
 
 public:
-    Person(int Id, string Name, string Pasword) :Id(Id), Name(Name), Pasword(Pasword) {}
+    Person(int Id, string Name, string Pasword) {
+    this->Id = Id;
+    setname(Name);
+    setpassword(Pasword);
+}
     Person() {}
     //setters
     void setid(int Id) {
