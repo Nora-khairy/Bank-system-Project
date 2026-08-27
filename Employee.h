@@ -9,9 +9,6 @@ private:
 	double salary;
 public:
 	//Constructor
-	Employee() {}
-
-
 	Employee(int Id, string Name, string Pasword, double salary) : Person( Id,Name, Pasword) {
 		setSalary(salary);
 	}
