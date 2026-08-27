@@ -57,11 +57,5 @@ public:
 		CheckBalance();
 	}
 };
-int main() {
-	Client c1(333, "menna", "asd123456", 2550.0);
-	Client c2(678, "mahmoud", "xxx56789", 4000.0);
-	c1.DisPlay();
-	c1.Deposit(200.0);
-	c1.Withdraw(300.0);
-	c1.TransferTo(1200.0, c2);
+ 
 }
