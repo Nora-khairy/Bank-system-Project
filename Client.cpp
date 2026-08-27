@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Validation.h"
-#include "person.cpp"
+#include "person.h"
 using namespace std;
 
 class Client : public Person {
