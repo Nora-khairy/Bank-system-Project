@@ -5,11 +5,11 @@
 #include "Person.h"
 class Employee :public Person
 {
-private:
+protected:
 	double salary;
 public:
 	//Constructor
-	Employee(int Id, string Name, string Pasword, double salary) : Person( Id,Name, Pasword) {
+	Employee(int Id, string Name, string Pasword, double salary) : Person(Id, Name, Pasword) {
 		setSalary(salary);
 	}
 	//setter salary 
@@ -25,12 +25,13 @@ public:
 
 	//GETTER salary
 	double  getSalary() {
-		return this->salary;
+		return salary;
 	}
 	//display 
-	void display() {
-		displayPerson();
-		cout << "Salary:" << salary << endl;
-	}
 
+	void displayEmployee()
+	{
+		displayPerson();
+		cout << "Salary: " << salary << endl;
+	}
 };
