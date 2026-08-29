@@ -53,4 +53,5 @@ public:
         cout << "ID :" << Id << endl;
         cout << "Password : " << Pasword << endl;
     }
+virtual void display() = 0;
 };
