@@ -6,7 +6,7 @@
 class Employee :public Person
 {
 protected:
-	double salary;
+	double salary ;
 public:
 	//Constructor
 	Employee(int Id, string Name, string Pasword, double salary) : Person(Id, Name, Pasword) {
@@ -28,10 +28,9 @@ public:
 		return salary;
 	}
 	//display 
-
-	void displayEmployee()
-	{
-		displayPerson();
+	
+	void display() override {
+		Person::displayPerson();
 		cout << "Salary: " << salary << endl;
 	}
 };
