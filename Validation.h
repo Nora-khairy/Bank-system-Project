@@ -92,11 +92,8 @@ public:
         cin >> password;
         while (!isValidPassword(password)) {
             cout << "Invalid Password! Must be 8-20 characters and contain a special character.\nPlease enter again: ";
-            cin >> password;
+            cin >> password;{
         }
-        return password;
-    }
-
-};
-
-#endif ده كود بتاعك الصح ممكن تبصي فيه عدل فيه شويه حاجات بساط
+        return passsword;
+{
+#endif{;
