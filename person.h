@@ -24,7 +24,7 @@ public:
             this->Name = Name;
         }
         else {
-            cout << "not Validation " << endl;
+           this->Name = Validation::enterName();
         }
     }
     void setpassword(string Pasword) {
@@ -32,7 +32,7 @@ public:
             this->Pasword = Pasword;
         }
         else {
-            cout << "not same password" << endl;
+             this->Pasword = Validation::enterPassword();
         }
 
     }
@@ -47,11 +47,10 @@ public:
         return Pasword;
     }
 
-
-    void displayPerson() {
-        cout << "name :" << Name << endl;
-        cout << "ID :" << Id << endl;
-        cout << "Password : " << Pasword << endl;
-    }
+ void displayPerson() {
+     cout << "ID :" << Id << endl;
+     cout << "name :" << Name << endl;
+     cout << "Password : " << Pasword << endl;
+ }
 virtual void display() = 0;
 };
