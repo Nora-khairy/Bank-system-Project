@@ -1,0 +1,45 @@
+#pragma once
+#include <iostream>
+#include "DataSourceInterface.h"
+#include "FilesHelper.h"
+
+using namespace std;
+
+class FileManager : public DataSourceInterface {
+public:
+    void addClient(Client client) override {
+        FilesHelper::SaveClient(client);
+    }
+
+    void addEmployee(Employee employee) override {
+        FilesHelper::SaveEmployee("Employee.txt", "EmployeeLastId.txt", employee);
+    }
+
+    void addAdmin(Admin admin) override {
+        FilesHelper::SaveAdmin(admin);
+    }
+
+    void getAllClients() override {
+        FilesHelper::GetClients();
+    }
+
+    void getAllEmployees() override {
+        FilesHelper::GetEmployees();
+    }
+
+    void getAllAdmins() override {
+        FilesHelper::GetAdmins();
+    }
+
+    void removeAllClients() override {
+        FilesHelper::ClearFile("Client.txt", "ClientLastId.txt");
+    }
+
+    void removeAllEmployees() override {
+        FilesHelper::ClearFile("Employee.txt", "EmployeeLastId.txt");
+    }
+
+    void removeAllAdmins() override {
+        FilesHelper::ClearFile("Admin.txt", "AdminLastId.txt");
+    }
+};
