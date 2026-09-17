@@ -3,6 +3,9 @@
 #include <string>
 #include "Validation.h"
 #include "Person.h"
+#include "Client.h"
+#include <vector>
+
 class Employee :public Person
 {
 protected:
@@ -27,6 +30,41 @@ public:
 	double  getSalary() {
 		return salary;
 	}
+	//Add Client
+	void AddClient(Client client) {
+		clients.push_back(client);
+	}
+	//search client
+	Client* searchClient(int id) {
+		for (Client& client : clients) {
+			if (client.getid() == id) {
+				return &client;
+			}
+		}
+		return nullptr;
+	}
+	//list of clients
+	void ListClients() {
+		cout << "List of Clients:" << endl;
+		for (Client& client : clients) {
+			client.display();
+			cout << "------------------------" << endl;
+		}
+	}
+	//edit client
+	void EditClient(int id, string newName, string newPassword, double newBalance) {
+		Client* client = searchClient(id);
+		if (client != nullptr) {
+			client->setname(newName);
+			client->setpassword(newPassword);
+			client->SetBalance(newBalance);
+			cout << "Client information updated successfully." << endl;
+		}
+		else {
+			cout << "Client not found." << endl;
+		}
+	}
+
 	//display 
 	
 	void display() override {
