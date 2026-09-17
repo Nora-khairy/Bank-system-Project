@@ -9,7 +9,6 @@
 #include <vector>
 
 class Admin :public Employee {
-class Admin :public Employee {
 protected:
 	vector<Employee> employees;
 
