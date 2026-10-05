@@ -12,7 +12,7 @@ class AdminManager :public EmployeeManager {
 private:
     static vector<Admin> admins;
 public:
-    // 1. Print Employee Menu
+    // 1. Print Admin Menu
     static void printAdminMenu() {
         cout << "========== Admin Menu ==========" << endl;
         cout << "1. New Client" << endl;
@@ -125,7 +125,11 @@ public:
             cout << "Invalid Choice." << endl;
         }
 
-        return true;
+        return true;    }
+ };
+// Definition of static vector
+vector<Admin> AdminManager::admins;
+ 
     }
  };
 // Definition of static vector
